@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Karri Avinash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    header h1 span { color: #00eaff; }
+    header p {
+      margin-top: 12px;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 40px 20px;
+    }
+    .buttons button {
+      background: transparent;
+      border: 2px solid #00eaff;
+      color: #00eaff;
+      padding: 12px 26px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .buttons button:hover {
+      background: #00eaff;
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,234,255,0.4);
+    }
+    .section {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      display: none;
+      animation: fadeIn 0.6s ease;
+    }
+    .section h2 {
+      color: #00eaff;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .section p, .section li {
+      font-size: 1rem;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+    ul { padding-left: 20px; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><span>My</span> Portfolio</h1>
+    <p><strong>Karri Avinash</strong></p>
+  </header>
+
+  <div class="buttons">
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('projects')">My Projects</button>
+    <button onclick="showSection('skills')">Tech Stack</button>
+    <button onclick="showSection('resume')">My Resume</button>
+  </div>
+
+  <div id="education" class="section">
+    <h2>Education</h2>
+    <p><strong>College:</strong> [ Spacex Degree College, Tuni]</p>
+    <p><strong>Intermediate:</strong> [Sri Chaitanya Junior College, Anakapilli,]</p>
+    <p><strong>School:</strong> [SRIGOURI VIDYA NIKETAN SCHOOL, YELAMANCHILI]</p>
+  </div>
+
+  <div id="projects" class="section">
+    <h2>My Projects</h2>
+    <ul>
+      <li>https://karriavinash8-rgb.github.io/avi-home-foods/</li>
+      <li>React Portfolio Website with Animations</li>
+      <li>Photo Editing & Ultra-Realistic Poster Designs</li>
+      <li>Custom Front-End Web Applications</li>
+    </ul>
+  </div>
+
+  <div id="skills" class="section">
+    <h2>Tech Stack</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>React.js</li>
+      <li>MS Word, MS Excel, MS PowerPoint</li>
+      <li>Basic Front end </li>
+    </ul>
+  </div>
+
+  <div id="resume" class="section">
+    <h2>My Resume</h2>
+    <link rel="stylesheet" href="c:\Users\AVINASH\OneDrive\Desktop\Avinash Resume (1).pdf" />
+    <p>Click the button below to download my resume.</p>
+    <br />
+    <button style="border-radius:8px; padding:10px 20px;">Download Resume</button>
+  </div>
+
+  <footer>
+    © 2026 | Designed & Built by Karri Avinash
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+      window.scrollTo({ top: document.getElementById(id).offsetTop - 40, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
